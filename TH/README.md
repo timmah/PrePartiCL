@@ -1,11 +1,4 @@
-PrePartiCL
-==========
-This repository holds a couple of code fragments that demonstrate a few of the techniques we plan to use with PartiCL.
-The first demonstrates the use of Template Haskell to vectorize a Haskell record type.
-That is, it takes a record type with scalar fields (instances of Data.Vector.Unbox) and returns a record type with vector fields.
-The second is a simple example of using a GADT with an associated type to define a type class to perform a similar transformation.
-
-## Template Haskell example of vectorization
+# Template Haskell example of vectorization
 The directory TH contains a simple example of vectorization by means of template Haskell.
 The file VecXForm.hs contains the template Haskell code that takes a record type with scalar fields and generates a corresponding record type with vector fields.
 The file Demo.hs shows a simple application of this.
