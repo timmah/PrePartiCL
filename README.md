@@ -25,8 +25,11 @@ Line 30 uses the new type to create a vectorized instance.
 
 One might want to experiment with this a bit in the Haskell interpreter.
 Start the interpreter, GHCi, with Template Haskell enabled:
+
     $ ghci -XTemplateHaskell
+
 Load the Demo module:
+
     Prelude> :l Demo.hs
     [1 of 2] Compiling VecXForm         ( VecXForm.hs, interpreted )
     [2 of 2] Compiling Demo             ( Demo.hs, interpreted )
@@ -40,11 +43,13 @@ Load the Demo module:
     Ok, modules loaded: Demo, VecXForm.
 
 Now print out **mytv**:
+
     Demo> mytv
-gdV = fromList [3.14159,6.28318] :: AppT (ConT Data.Vector.Unboxed.Base.Vector) (ConT GHC.Types.Double),
-giV = fromList [42,43,44,45,46,47,48,49,50,51,52,53] :: AppT (ConT Data.Vector.Unboxed.Base.Vector) (ConT GHC.Types.Int)
+    gdV = fromList [3.14159,6.28318] :: AppT (ConT Data.Vector.Unboxed.Base.Vector) (ConT GHC.Types.Double),
+    giV = fromList [42,43,44,45,46,47,48,49,50,51,52,53] :: AppT (ConT Data.Vector.Unboxed.Base.Vector) (ConT GHC.Types.Int)
 
 The type of **mytv** is **MyTVectorized**:
+
     Demo> :type mytv
     mytv :: MyTVectorized
 
